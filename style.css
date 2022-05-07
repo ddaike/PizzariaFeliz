@@ -6,13 +6,13 @@
 
 :root {
     font-size: 62.5%; /*1rem = 10px */
-    --hue:2;
-    --primary-color: hsl(var(--hue), 100%, 36%);
-    --headline: hsl(0, 53%, 14%);
-    --paragraph: hsl(2, 100%, 11%);
-    --grand-beige: hsl(356, 31%, 68%);
-    --brand-light: hsl(4, 89%, 81%);
-    --bg-color: hsl(4, 36%, 84%);
+    --hue:10;
+    --primary-color: hsl(var(--hue), 90%, 43%);
+    --headline: #921100;
+    --paragraph: #380200;
+    --grand-beige: #e98282;
+    --brand-light: #faa9a3;
+    --bg-color: #e5c9c8;
     --nav-height: 7.2rem;
     --brand-dark: hsl(var(--hue), 95%, 8%); 
 }
