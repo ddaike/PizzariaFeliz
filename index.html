@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Feliz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body onscroll="onScroll()">
+    <nav id="navigation">
+
+        <div class="wrapper">
+
+            <a class="logo" href="#home">
+                <img src="/assets/logo.png" alt="logomarca">
+            </a>
+            <div class="menu" id="activate">
+                <ul>
+                    <li> <a onclick="closeMenu()"
+                        href="#home">Ínicio</a></li>
+                    <li> <a onclick="closeMenu()" 
+                        href="#services">Serviços</a></li>
+                    <li> <a onclick="closeMenu()"
+                        href="#about">Sobre</a></li>
+                </ul>
+                <a class="button" onclick="closeMenu()" href="#contact"
+                > Peça sua pizza </a>
+                
+                <ul class="social-links">
+                    <li> 
+                        <a
+                        target="_blank" 
+                        href="https://instagram.com/daarajourdan">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.5 6.49997H17.51" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </a>
+                    </li>
+
+                    <li> 
+                        <a 
+                        target="_blank"
+                        href="https://facebook.com/daarajourdan">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                        </a>
+                    </li>
+
+                    <li> 
+                        <a 
+                        target="_blank"
+                        href="https://youtube.com/adventureofdaara">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                <button 
+                aria-expanded="false"
+                aria-label="Abrir menu"
+                onclick="openMenu()"
+                class="open-menu">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20H30" stroke="#380100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 12H30" stroke="#380100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18 28L30 28" stroke="#380100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button
+                aria-expanded="true"
+                aria-label="fechar menu"
+                onclick="closeMenu()"
+                class="close-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+        </div> 
+
+    </nav>
+
+
+    <section id="home" >
+        <div class="wrapper">
+            <div class="col-a">
+                <header>
+                    <h4> BOAS VINDAS A PIZZARIA FELIZ</h4>
+                    <h1> Assistência ao cliente simplificada para todos</h1>
+                </header>
+                <div class="content">
+                    
+                <p>A PIZZARIA FELIZ vai além dos sabores extraordinários
+                        para cuidar da sua fome e proporcionar uma pizza saborosa
+                        rapidinho até sua casa.
+                </p>
+                        <a class="button" href="#contact">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.8337 11.6667C13.667 11.5833 12.5837 11.0833 12.417 11C12.2503 10.9167 12.0837 10.9167 11.917 11.0833C11.7503 11.25 11.417 11.75 11.2503 11.9167C11.167 12.0833 11.0003 12.0833 10.8337 12C10.2503 11.75 9.66699 11.4167 9.16699 11C8.75033 10.5833 8.33366 10.0833 8.00033 9.58334C7.91699 9.41668 8.00033 9.25001 8.08366 9.16668C8.16699 9.08334 8.25033 8.91668 8.41699 8.83334C8.50033 8.75001 8.58366 8.58334 8.58366 8.50001C8.66699 8.41668 8.66699 8.25001 8.58366 8.16668C8.50033 8.08334 8.08366 7.08334 7.91699 6.66668C7.83366 6.08334 7.66699 6.08334 7.50033 6.08334C7.41699 6.08334 7.25033 6.08334 7.08366 6.08334C6.91699 6.08334 6.66699 6.25001 6.58366 6.33334C6.08366 6.83334 5.83366 7.41668 5.83366 8.08334C5.91699 8.83334 6.16699 9.58334 6.66699 10.25C7.58366 11.5833 8.75033 12.6667 10.167 13.3333C10.5837 13.5 10.917 13.6667 11.3337 13.75C11.7503 13.9167 12.167 13.9167 12.667 13.8333C13.2503 13.75 13.7503 13.3333 14.0837 12.8333C14.2503 12.5 14.2503 12.1667 14.167 11.8333C14.167 11.8333 14.0003 11.75 13.8337 11.6667ZM15.917 4.08334C12.667 0.833344 7.41699 0.833344 4.16699 4.08334C1.50033 6.75001 1.00033 10.8333 2.83366 14.0833L1.66699 18.3333L6.08366 17.1667C7.33366 17.8333 8.66699 18.1667 10.0003 18.1667C14.5837 18.1667 18.2503 14.5 18.2503 9.91668C18.3337 7.75001 17.417 5.66668 15.917 4.08334ZM13.667 15.75C12.5837 16.4167 11.3337 16.8333 10.0003 16.8333C8.75033 16.8333 7.58366 16.5 6.50033 15.9167L6.25033 15.75L3.66699 16.4167L4.33366 13.9167L4.16699 13.6667C2.16699 10.3333 3.16699 6.16668 6.41699 4.08334C9.66699 2.00001 13.8337 3.08334 15.8337 6.25001C17.8337 9.50001 16.917 13.75 13.667 15.75Z" fill="white"/>
+                        </svg>
+                        peça sua pizza
+                </a>
+                </div>
+            </div>
+            <div class="col-b">
+                <img src="/assets/Foto.png" alt="Imagem de mulher branca comendo uma pizza"/>
+            </div>
+
+            <div class="stats">
+                    <div class="stat">
+                        <h3>+3500</h3>
+                        <p>Pizza vendidas</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>+15</h3>
+                        <p>Pizzarias espalhadas pela cidade</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>+10</h3>
+                        <p>Anos no mercado</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="wrapper">
+                <header>
+                    <h4>serviços</h4>
+                    <h2>Como podemos ajudá-lo a matar sua fome ?</h2>
+                </header>
+                <div class="cards">
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3>Formas de pagamento</h3>
+                        <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim.</p>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <h3>Sabor promocional</h3>
+                        <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim.</p>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <h3>A mais pedida</h3>
+                        <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim.</p>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <h3>Sabor da casa</h3>
+                        <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim.</p>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <h3>Frete grátis</h3>
+                        <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim.</p>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <h3>Receitas especiais</h3>
+                        <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim.</p>
+                    </div>
+
+                </div>
+
+        </div>
+    </section>
+        
+    <section id="about">
+        <div class="wrapper">
+            <div class="col-a">
+
+
+                <header>
+                    <h4>Sobre nós</h4>
+                    <h2>Entenda quem somos e por que existimos</h2>
+                </header>
+                
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Itaque quod accusamus doloribus nihil deserunt, 
+                        sequi nulla ad quaerat aperiam placeat, eaque amet autem at tempora architecto! 
+                        Magni sit dignissimos aut?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Itaque quod accusamus doloribus nihil deserunt, 
+                        sequi nulla ad quaerat aperiam placeat, eaque amet autem at tempora architecto! 
+                        Magni sit dignissimos aut?                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Itaque quod accusamus doloribus nihil deserunt, 
+                        sequi nulla ad quaerat aperiam placeat, eaque amet autem at tempora architecto! 
+                        Magni sit dignissimos aut?
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-b">
+                <img src="/assets/pizza-tamanho-grande-cortada.png" alt="pizza tamanho grande cortada" />
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="wrapper">
+            <div class="col-a">
+                <header>
+                <h2>Entre em contato com a gente!</h2>
+                </header>
+            <div class="content">
+                <ul>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.00002C9.87827 2.00002 7.84344 2.84287 6.34315 4.34316C4.84285 5.84345 4 7.87828 4 10C4 13.0981 6.01574 16.1043 8.22595 18.4373C9.31061 19.5822 10.3987 20.5195 11.2167 21.1709C11.5211 21.4133 11.787 21.6152 12 21.7726C12.213 21.6152 12.4789 21.4133 12.7833 21.1709C13.6013 20.5195 14.6894 19.5822 15.774 18.4373C17.9843 16.1043 20 13.0981 20 10C20 7.87828 19.1571 5.84345 17.6569 4.34316C16.1566 2.84287 14.1217 2.00002 12 2.00002ZM12 23C11.4453 23.8321 11.445 23.8319 11.4448 23.8317L11.4419 23.8298L11.4352 23.8253L11.4123 23.8098C11.3928 23.7966 11.3651 23.7776 11.3296 23.753C11.2585 23.7038 11.1565 23.6321 11.0278 23.5392C10.7705 23.3534 10.4064 23.0822 9.97082 22.7354C9.10133 22.043 7.93939 21.0428 6.77405 19.8128C4.48426 17.3958 2 13.902 2 10C2 7.34785 3.05357 4.80431 4.92893 2.92895C6.8043 1.05358 9.34784 1.52588e-05 12 1.52588e-05C14.6522 1.52588e-05 17.1957 1.05358 19.0711 2.92895C20.9464 4.80431 22 7.34785 22 10C22 13.902 19.5157 17.3958 17.226 19.8128C16.0606 21.0428 14.8987 22.043 14.0292 22.7354C13.5936 23.0822 13.2295 23.3534 12.9722 23.5392C12.8435 23.6321 12.7415 23.7038 12.6704 23.753C12.6349 23.7776 12.6072 23.7966 12.5877 23.8098L12.5648 23.8253L12.5581 23.8298L12.556 23.8312C12.5557 23.8314 12.5547 23.8321 12 23ZM12 23L12.5547 23.8321C12.2188 24.056 11.7807 24.0556 11.4448 23.8317L12 23Z" fill="#B80300"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 12.7615 14.7614 15 12 15C9.23858 15 7 12.7615 7 10C7 7.23861 9.23858 5.00003 12 5.00003C14.7614 5.00003 17 7.23861 17 10ZM15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34318 10.3431 7.00003 12 7.00003C13.6569 7.00003 15 8.34318 15 10Z" fill="#B80300"/>
+                            </svg>
+                            
+                                  
+                            R. Amauri Souza, 346</li>
+
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5.00002C3.45228 5.00002 3 5.4523 3 6.00002V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6.00002C21 5.4523 20.5477 5.00002 20 5.00002H4ZM1 6.00002C1 4.34773 2.34772 3.00002 4 3.00002H20C21.6523 3.00002 23 4.34773 23 6.00002V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6.00002Z" fill="#B80300"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z" fill="#B80300"/>
+                            </svg>
+                                
+                            contato@pizzariafeliz.com</li>
+                </ul>
+                    <a class="button"
+                     href="https://wa.me/5585996232452" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z" fill="white"/>
+                    </svg>
+                        
+                        Peça sua pizza!
+                    </a>
+                    </div>
+            </div>
+
+            <div class="col-b">
+            <img src="/assets/homem-negro-mexendo-no-celular-sorrindo.png" alt="homem negro mexendo no celular sorrindo">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrapper">
+
+            <div class="col-a">
+
+                
+                <img class="logo" src="/assets/logo.png" alt="logomarca">
+                <p>
+                    ©2021 PizzariaFeliz. <br>
+                    Todos os direitos reservados.
+                </p>
+            </div>
+
+            <div class="col-b">
+
+            
+                <ul class="social-links">
+                    <li> 
+                        <a
+                    target="_blank" 
+                    href="https://instagram.com/daarajourdan">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.5 6.49997H17.51" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                
+                </a>
+            </li>
+            
+            <li> 
+                <a 
+                target="_blank"
+                href="https://facebook.com/daarajourdan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+            </a>
+            </li>
+        
+            <li> 
+                <a 
+                target="_blank"
+                href="https://youtube.com/adventureofdaara">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            
+            </a>
+            </li>
+                </ul> 
+            </div>
+        </div>   
+</footer>
+
+<a id="BackToTopButton" class="show" href="#home">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="#380100"/>
+            <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+    </a>
+
+        <!--scrollReveal LIB-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="main.js"> </script>
+    </body>
+</html>
+
