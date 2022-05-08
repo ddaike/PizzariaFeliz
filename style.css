@@ -82,6 +82,11 @@ section .content img {
     max-width: 100%;
 }
 
+section img {
+    display: block;
+    Padding: 0;
+    Max-width: 100%;
+}
 
 .button {
     background-color: var(--primary-color);
@@ -396,7 +401,7 @@ body.menu-expanded button {
 }
 
 
-#contact img {
+#contact .col-b img {
     width: 20rem
     display: block;
     margin-inline: auto;
